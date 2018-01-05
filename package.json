@@ -1,0 +1,31 @@
+{
+  "name": "eth-graphql",
+  "version": "1.0.0",
+  "description": "Ethereum GraphQL API",
+  "main": "index.js",
+  "scripts": {
+    "blockchain": "ganache-cli",
+    "start": "npm run blockchain & node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukehedger/eth-graphql.git"
+  },
+  "keywords": [
+    "ethereum",
+    "graphql"
+  ],
+  "author": "Luke Hedger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukehedger/eth-graphql/issues"
+  },
+  "homepage": "https://github.com/lukehedger/eth-graphql#readme",
+  "dependencies": {
+    "graphql-yoga": "^0.9.0",
+    "node-fetch": "^1.7.3"
+  },
+  "devDependencies": {
+    "ganache-cli": "^6.0.3"
+  }
+}
