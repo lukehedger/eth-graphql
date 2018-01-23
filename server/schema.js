@@ -26,6 +26,20 @@ const typeDefs = `
     uncles: [String]!
   }
 
+  type Transaction {
+    blockHash: String!
+    blockNumber: String!
+    from: String!
+    gas: String!
+    gasPrice: String!
+    hash: String!
+    input: String!
+    nonce: String!
+    to: String!
+    transactionIndex: String!
+    value: String!
+  }
+
   type Query {
     accounts(params: [String] = []): [String]!
     accountsWithBalances: [AccountWithBalance]!
@@ -37,6 +51,7 @@ const typeDefs = `
     getBlockByNumber(params: [String] = []): Block!
     getBlockTransactionCountByHash(params: [String] = []): String!
     getBlockTransactionCountByNumber(params: [String] = []): String!
+    getTransactionByHash(params: [String] = []): Transaction!
     getTransactionCount(params: [String] = []): String!
     getUncleCountByBlockHash(params: [String] = []): String!
     getUncleCountByBlockNumber(params: [String] = []): String!
