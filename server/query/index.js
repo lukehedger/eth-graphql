@@ -4,6 +4,7 @@ const blockNumber = require('./blockNumber.js')
 const coinbase = require('./coinbase.js')
 const gasPrice = require('./gasPrice.js')
 const getBalance = require('./getBalance.js')
+const getBlockTransactionCountByHash = require('./getBlockTransactionCountByHash.js')
 const getTransactionCount = require('./getTransactionCount.js')
 const hashrate = require('./hashrate.js')
 const listening = require('./listening.js')
@@ -19,6 +20,7 @@ module.exports = {
   coinbase,
   gasPrice,
   getBalance,
+  getBlockTransactionCountByHash,
   getTransactionCount,
   hashrate,
   listening,

@@ -4,7 +4,7 @@ const { makeRPCRequest } = require('../util')
 /**
  * Returns the number of transactions sent from an address.
  *
- * @example query { getTransactionCount }
+ * @example query { getTransactionCount(params:["0x..."]) }
  *
  * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getTransactionCount
  *
