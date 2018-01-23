@@ -11,6 +11,7 @@ const typeDefs = `
     getBalance(params: [String] = []): String!
     listening: Boolean!
     peerCount: String!
+    protocolVersion: String!
     version: String!
   }
 `

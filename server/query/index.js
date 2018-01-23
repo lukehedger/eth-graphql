@@ -4,6 +4,7 @@ const blockNumber = require('./blockNumber.js')
 const getBalance = require('./getBalance.js')
 const listening = require('./listening.js')
 const peerCount = require('./peerCount.js')
+const protocolVersion = require('./protocolVersion.js')
 const version = require('./version.js')
 
 module.exports = {
@@ -13,5 +14,6 @@ module.exports = {
   getBalance,
   listening,
   peerCount,
+  protocolVersion,
   version,
 }
