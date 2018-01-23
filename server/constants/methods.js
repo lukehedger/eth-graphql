@@ -4,6 +4,7 @@ module.exports = {
     blockNumber: 'eth_blockNumber',
     coinbase: 'eth_coinbase',
     getBalance: 'eth_getBalance',
+    hashrate: 'eth_hashrate',
     mining: 'eth_mining',
     protocolVersion: 'eth_protocolVersion',
   },

@@ -10,6 +10,7 @@ const typeDefs = `
     blockNumber(params: [String] = []): String!
     coinbase: String!
     getBalance(params: [String] = []): String!
+    hashrate: String!
     listening: Boolean!
     mining: Boolean!
     peerCount: String!
