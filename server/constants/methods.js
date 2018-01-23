@@ -2,6 +2,7 @@ module.exports = {
   eth: {
     accounts: 'eth_accounts',
     blockNumber: 'eth_blockNumber',
+    coinbase: 'eth_coinbase',
     getBalance: 'eth_getBalance',
     protocolVersion: 'eth_protocolVersion',
   },

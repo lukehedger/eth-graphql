@@ -8,6 +8,7 @@ const typeDefs = `
     accounts(params: [String] = []): [String]!
     accountsWithBalances: [AccountWithBalance]!
     blockNumber(params: [String] = []): String!
+    coinbase: String!
     getBalance(params: [String] = []): String!
     listening: Boolean!
     peerCount: String!
