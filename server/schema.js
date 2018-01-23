@@ -33,6 +33,7 @@ const typeDefs = `
     coinbase: String!
     gasPrice: String!
     getBalance(params: [String] = []): String!
+    getBlockByHash(params: [String] = []): Block!
     getBlockByNumber(params: [String] = []): Block!
     getBlockTransactionCountByHash(params: [String] = []): String!
     getBlockTransactionCountByNumber(params: [String] = []): String!

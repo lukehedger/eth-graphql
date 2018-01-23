@@ -5,6 +5,7 @@ module.exports = {
     coinbase: 'eth_coinbase',
     gasPrice: 'eth_gasPrice',
     getBalance: 'eth_getBalance',
+    getBlockByHash: 'eth_getBlockByHash',
     getBlockByNumber: 'eth_getBlockByNumber',
     getBlockTransactionCountByHash: 'eth_getBlockTransactionCountByHash',
     getBlockTransactionCountByNumber: 'eth_getBlockTransactionCountByNumber',
