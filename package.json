@@ -3,10 +3,26 @@
   "version": "1.0.0",
   "description": "Ethereum GraphQL API",
   "main": "server/index.js",
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix \"server/**/*.js\"",
+      "prettier --write --no-semi --single-quote --trailing-comma=es5",
+      "git add"
+    ]
+  },
+  "pre-commit": {
+    "run": [
+      "lint:staged",
+      "test"
+    ],
+    "silent": true
+  },
   "scripts": {
     "blockchain": "ganache-cli",
+    "lint:staged": "lint-staged",
     "start": "npm run blockchain & nodemon --watch server server",
-    "start:prod": "node server"
+    "start:prod": "node server",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -28,7 +44,12 @@
     "node-fetch": "^1.7.3"
   },
   "devDependencies": {
+    "eslint": "^4.16.0",
     "ganache-cli": "^6.0.3",
-    "nodemon": "^1.14.11"
+    "jest": "^22.1.4",
+    "lint-staged": "^6.0.1",
+    "nodemon": "^1.14.11",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.10.2"
   }
 }
