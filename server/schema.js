@@ -51,6 +51,7 @@ const typeDefs = `
     getBlockByNumber(params: [String] = []): Block!
     getBlockTransactionCountByHash(params: [String] = []): String!
     getBlockTransactionCountByNumber(params: [String] = []): String!
+    getTransactionByBlockHashAndIndex(params: [String] = []): Transaction!
     getTransactionByHash(params: [String] = []): Transaction!
     getTransactionCount(params: [String] = []): String!
     getUncleCountByBlockHash(params: [String] = []): String!

@@ -9,6 +9,7 @@ module.exports = {
     getBlockByNumber: 'eth_getBlockByNumber',
     getBlockTransactionCountByHash: 'eth_getBlockTransactionCountByHash',
     getBlockTransactionCountByNumber: 'eth_getBlockTransactionCountByNumber',
+    getTransactionByBlockHashAndIndex: 'eth_getTransactionByBlockHashAndIndex',
     getTransactionByHash: 'eth_getTransactionByHash',
     getTransactionCount: 'eth_getTransactionCount',
     getUncleCountByBlockHash: 'eth_getUncleCountByBlockHash',
