@@ -11,6 +11,7 @@ const typeDefs = `
     coinbase: String!
     getBalance(params: [String] = []): String!
     listening: Boolean!
+    mining: Boolean!
     peerCount: String!
     protocolVersion: String!
     version: String!

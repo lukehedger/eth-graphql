@@ -8,7 +8,7 @@ const { makeRPCRequest } = require('../util')
  *
  * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_protocolVersion
  *
- * @return {Boolean}
+ * @return {String}
  */
 const protocolVersion = async () => {
   try {
