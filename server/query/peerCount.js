@@ -2,7 +2,7 @@ const { METHODS, RPC_ENDPOINT } = require('../constants')
 const { makeRPCRequest } = require('../util')
 
 /**
- * Returns the current network id.
+ * Returns number of peers currently connected to the client.
  *
  * @example query { peerCount }
  *
