@@ -2,6 +2,7 @@ const accounts = require('./accounts.js')
 const accountsWithBalances = require('./accountsWithBalances.js')
 const blockNumber = require('./blockNumber.js')
 const coinbase = require('./coinbase.js')
+const gasPrice = require('./gasPrice.js')
 const getBalance = require('./getBalance.js')
 const hashrate = require('./hashrate.js')
 const listening = require('./listening.js')
@@ -15,6 +16,7 @@ module.exports = {
   accountsWithBalances,
   blockNumber,
   coinbase,
+  gasPrice,
   getBalance,
   hashrate,
   listening,

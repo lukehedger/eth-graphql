@@ -9,6 +9,7 @@ const typeDefs = `
     accountsWithBalances: [AccountWithBalance]!
     blockNumber(params: [String] = []): String!
     coinbase: String!
+    gasPrice: String!
     getBalance(params: [String] = []): String!
     hashrate: String!
     listening: Boolean!

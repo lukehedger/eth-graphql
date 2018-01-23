@@ -3,6 +3,7 @@ module.exports = {
     accounts: 'eth_accounts',
     blockNumber: 'eth_blockNumber',
     coinbase: 'eth_coinbase',
+    gasPrice: 'eth_gasPrice',
     getBalance: 'eth_getBalance',
     hashrate: 'eth_hashrate',
     mining: 'eth_mining',
