@@ -4,4 +4,7 @@ module.exports = {
     blockNumber: 'eth_blockNumber',
     getBalance: 'eth_getBalance',
   },
+  net: {
+    version: 'net_version',
+  },
 }
