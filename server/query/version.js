@@ -14,6 +14,10 @@ const version = async () => {
   try {
     const rpc = await makeRPCRequest(RPC_ENDPOINT, METHODS.net.version)
 
+    if (rpc.error) {
+      throw new Error(rpc.error.message)
+    }
+
     return rpc.result
   } catch (e) {
     console.error(e)

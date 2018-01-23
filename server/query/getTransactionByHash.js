@@ -6,7 +6,7 @@ const { makeRPCRequest } = require('../util')
  *
  * @example query { getTransactionByHash(params:["0x..."]) }
  *
- * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getTransactionByHash
+ * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gettransactionbyhash
  *
  * @param  {Object} _           Parent resolver context
  * @param  {Object} args        Query arguments

@@ -6,7 +6,7 @@ const { makeRPCRequest } = require('../util')
  *
  * @example query { getBlockByHash(params:["0x..."]) }
  *
- * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getBlockByHash
+ * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getblockbyhash
  *
  * @param  {Object} _           Parent resolver context
  * @param  {Object} args        Query arguments

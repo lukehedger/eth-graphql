@@ -14,6 +14,10 @@ const coinbase = async () => {
   try {
     const rpc = await makeRPCRequest(RPC_ENDPOINT, METHODS.eth.coinbase)
 
+    if (rpc.error) {
+      throw new Error(rpc.error.message)
+    }
+
     return rpc.result
   } catch (e) {
     console.error(e)

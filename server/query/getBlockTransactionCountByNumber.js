@@ -6,7 +6,7 @@ const { makeRPCRequest } = require('../util')
  *
  * @example query { getBlockTransactionCountByNumber(params:["0x..."]) }
  *
- * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getBlockTransactionCountByNumber
+ * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getblocktransactioncountbynumber
  *
  * @param  {Object} _           Parent resolver context
  * @param  {Object} args        Query arguments
@@ -16,6 +16,10 @@ const { makeRPCRequest } = require('../util')
 const getBlockTransactionCountByNumber = async (_, { params }) => {
   try {
     const rpc = await makeRPCRequest(RPC_ENDPOINT, METHODS.eth.getBlockTransactionCountByNumber, params)
+
+    if (rpc.error) {
+      throw new Error(rpc.error.message)
+    }
 
     return rpc.result
   } catch (e) {

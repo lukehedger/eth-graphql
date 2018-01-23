@@ -6,7 +6,7 @@ const { makeRPCRequest } = require('../util')
  *
  * @example query { getBlockByNumber(params:["latest"]) }
  *
- * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getBlockByNumber
+ * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getblockbynumber
  *
  * @param  {Object} _           Parent resolver context
  * @param  {Object} args        Query arguments

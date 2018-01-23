@@ -14,6 +14,10 @@ const listening = async () => {
   try {
     const rpc = await makeRPCRequest(RPC_ENDPOINT, METHODS.net.listening)
 
+    if (rpc.error) {
+      throw new Error(rpc.error.message)
+    }
+
     return rpc.result
   } catch (e) {
     console.error(e)

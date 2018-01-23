@@ -6,13 +6,17 @@ const { makeRPCRequest } = require('../util')
  *
  * @example query { gasPrice }
  *
- * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gasPrice
+ * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gasprice
  *
  * @return {String}
  */
 const gasPrice = async () => {
   try {
     const rpc = await makeRPCRequest(RPC_ENDPOINT, METHODS.eth.gasPrice)
+
+    if (rpc.error) {
+      throw new Error(rpc.error.message)
+    }
 
     return rpc.result
   } catch (e) {
