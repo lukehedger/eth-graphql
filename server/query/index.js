@@ -9,6 +9,7 @@ const getBlockByNumber = require('./getBlockByNumber.js')
 const getBlockTransactionCountByHash = require('./getBlockTransactionCountByHash.js')
 const getBlockTransactionCountByNumber = require('./getBlockTransactionCountByNumber.js')
 const getTransactionByBlockHashAndIndex = require('./getTransactionByBlockHashAndIndex.js')
+const getTransactionByBlockNumberAndIndex = require('./getTransactionByBlockNumberAndIndex.js')
 const getTransactionByHash = require('./getTransactionByHash.js')
 const getTransactionCount = require('./getTransactionCount.js')
 const getUncleCountByBlockHash = require('./getUncleCountByBlockHash.js')
@@ -32,6 +33,7 @@ module.exports = {
   getBlockTransactionCountByHash,
   getBlockTransactionCountByNumber,
   getTransactionByBlockHashAndIndex,
+  getTransactionByBlockNumberAndIndex,
   getTransactionByHash,
   getTransactionCount,
   getUncleCountByBlockHash,
