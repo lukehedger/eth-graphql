@@ -14,6 +14,7 @@ const typeDefs = `
     getBlockTransactionCountByHash(params: [String] = []): String!
     getBlockTransactionCountByNumber(params: [String] = []): String!
     getTransactionCount(params: [String] = []): String!
+    getUncleCountByBlockHash(params: [String] = []): String!
     hashrate: String!
     listening: Boolean!
     mining: Boolean!
