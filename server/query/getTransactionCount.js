@@ -15,7 +15,11 @@ const { makeRPCRequest } = require('../util')
  */
 const getTransactionCount = async (_, { params }) => {
   try {
-    const rpc = await makeRPCRequest(RPC_ENDPOINT, METHODS.eth.getTransactionCount, params)
+    const rpc = await makeRPCRequest(
+      RPC_ENDPOINT,
+      METHODS.eth.getTransactionCount,
+      params
+    )
 
     if (rpc.error) {
       throw new Error(rpc.error.message)

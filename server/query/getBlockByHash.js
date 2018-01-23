@@ -15,7 +15,10 @@ const { makeRPCRequest } = require('../util')
  */
 const getBlockByHash = async (_, { params }) => {
   try {
-    const rpc = await makeRPCRequest(RPC_ENDPOINT, METHODS.eth.getBlockByHash, [...params, true])
+    const rpc = await makeRPCRequest(RPC_ENDPOINT, METHODS.eth.getBlockByHash, [
+      ...params,
+      true,
+    ])
 
     if (rpc.error) {
       throw new Error(rpc.error.message)

@@ -15,7 +15,11 @@ const { makeRPCRequest } = require('../util')
  */
 const getBlockTransactionCountByNumber = async (_, { params }) => {
   try {
-    const rpc = await makeRPCRequest(RPC_ENDPOINT, METHODS.eth.getBlockTransactionCountByNumber, params)
+    const rpc = await makeRPCRequest(
+      RPC_ENDPOINT,
+      METHODS.eth.getBlockTransactionCountByNumber,
+      params
+    )
 
     if (rpc.error) {
       throw new Error(rpc.error.message)

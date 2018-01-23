@@ -1,5 +1,4 @@
 const { GraphQLServer } = require('graphql-yoga')
-const fetch = require('node-fetch')
 
 const Query = require('./query')
 const schema = require('./schema.js')

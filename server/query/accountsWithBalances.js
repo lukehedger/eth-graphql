@@ -15,7 +15,10 @@ const { makeRPCRequest } = require('../util')
  */
 const accountsWithBalances = async () => {
   try {
-    const { result: accounts } = await makeRPCRequest(RPC_ENDPOINT, METHODS.eth.accounts)
+    const { result: accounts } = await makeRPCRequest(
+      RPC_ENDPOINT,
+      METHODS.eth.accounts
+    )
 
     const balances = await Promise.all(
       accounts.map(account =>
@@ -26,7 +29,7 @@ const accountsWithBalances = async () => {
     const result = balances.map(({ result: balance }, index) => {
       return {
         address: accounts[index],
-        balance: unit.fromWei(balance, 'ether')
+        balance: unit.fromWei(balance, 'ether'),
       }
     })
 

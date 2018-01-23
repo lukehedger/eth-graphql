@@ -1,3 +1,5 @@
+const fetch = require('node-fetch')
+
 /**
  * Construct RPC HTTP request
  *
@@ -6,7 +8,7 @@
  * @param  {Array}  params   RPC parameters
  * @return {Object}          RPC response body
  */
-const makeRPCRequest = (endpoint, method, params=[]) => {
+const makeRPCRequest = (endpoint, method, params = []) => {
   return fetch(endpoint, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -15,7 +17,7 @@ const makeRPCRequest = (endpoint, method, params=[]) => {
       method: method,
       params: params,
       id: 1,
-    })
+    }),
   }).then(res => res.json())
 }
 

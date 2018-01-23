@@ -15,7 +15,11 @@ const { makeRPCRequest } = require('../util')
  */
 const blockNumber = async (_, { params }) => {
   try {
-    const rpc = await makeRPCRequest(RPC_ENDPOINT, METHODS.eth.blockNumber, params)
+    const rpc = await makeRPCRequest(
+      RPC_ENDPOINT,
+      METHODS.eth.blockNumber,
+      params
+    )
 
     if (rpc.error) {
       throw new Error(rpc.error.message)

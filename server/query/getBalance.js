@@ -15,7 +15,11 @@ const { makeRPCRequest } = require('../util')
  */
 const getBalance = async (_, { params }) => {
   try {
-    const rpc = await makeRPCRequest(RPC_ENDPOINT, METHODS.eth.getBalance, params)
+    const rpc = await makeRPCRequest(
+      RPC_ENDPOINT,
+      METHODS.eth.getBalance,
+      params
+    )
 
     if (rpc.error) {
       throw new Error(rpc.error.message)
