@@ -2,10 +2,11 @@
   "name": "eth-graphql",
   "version": "1.0.0",
   "description": "Ethereum GraphQL API",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "blockchain": "ganache-cli",
-    "start": "npm run blockchain & node index.js"
+    "start": "npm run blockchain & nodemon --watch server server",
+    "start:prod": "node server"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "node-fetch": "^1.7.3"
   },
   "devDependencies": {
-    "ganache-cli": "^6.0.3"
+    "ganache-cli": "^6.0.3",
+    "nodemon": "^1.14.11"
   }
 }

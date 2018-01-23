@@ -18,15 +18,16 @@ npm start
 
 Test it out on `http://localhost:4000/`:
 ```js
-{
-  blockNumber(params:[])
-  accounts(params:[])
+query {
+  blockNumber
+  accounts
+  getBalance(params:["0x1f0dff2d80c4812adaf0c93349b28abaa9a84710"])
 }
 ```
 
-![graphql-playground](https://user-images.githubusercontent.com/1913316/34625497-c5fe77e2-f250-11e7-809b-aa2aeca13e02.png)
+![graphql-playground](https://user-images.githubusercontent.com/1913316/35271739-fb22580c-002a-11e8-9df7-3e513730e362.png)
 
 Or with `curl`:
 ```bash
-curl 'http://localhost:4000/' -H 'Content-Type: application/json' --data-binary '{"query":"{\n  blockNumber(params:[])\n  accounts(params:[])\n}","variables":{},"operationName":null}'
+curl 'http://localhost:4000/' -H 'Content-Type: application/json' --data-binary '{"query":"query {\n  blockNumber\n  accounts\n  getBalance(params:[\"0x1f0dff2d80c4812adaf0c93349b28abaa9a84710\"])\n}","variables":{},"operationName":null}'
 ```
