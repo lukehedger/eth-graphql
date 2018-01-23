@@ -13,8 +13,6 @@ module.exports = {
     getTransactionByBlockNumberAndIndex: 'eth_getTransactionByBlockNumberAndIndex',
     getTransactionByHash: 'eth_getTransactionByHash',
     getTransactionCount: 'eth_getTransactionCount',
-    getUncleCountByBlockHash: 'eth_getUncleCountByBlockHash',
-    getUncleCountByBlockNumber: 'eth_getUncleCountByBlockNumber',
     hashrate: 'eth_hashrate',
     mining: 'eth_mining',
     protocolVersion: 'eth_protocolVersion',
