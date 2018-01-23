@@ -8,6 +8,7 @@ const getBlockTransactionCountByHash = require('./getBlockTransactionCountByHash
 const getBlockTransactionCountByNumber = require('./getBlockTransactionCountByNumber.js')
 const getTransactionCount = require('./getTransactionCount.js')
 const getUncleCountByBlockHash = require('./getUncleCountByBlockHash.js')
+const getUncleCountByBlockNumber = require('./getUncleCountByBlockNumber.js')
 const hashrate = require('./hashrate.js')
 const listening = require('./listening.js')
 const mining = require('./mining.js')
@@ -26,6 +27,7 @@ module.exports = {
   getBlockTransactionCountByNumber,
   getTransactionCount,
   getUncleCountByBlockHash,
+  getUncleCountByBlockNumber,
   hashrate,
   listening,
   mining,
