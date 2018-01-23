@@ -9,6 +9,7 @@ const typeDefs = `
     accountsWithBalances: [AccountWithBalance]!
     blockNumber(params: [String] = []): String!
     getBalance(params: [String] = []): String!
+    peerCount: String!
     version: String!
   }
 `

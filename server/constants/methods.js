@@ -5,6 +5,7 @@ module.exports = {
     getBalance: 'eth_getBalance',
   },
   net: {
+    peerCount: 'net_peerCount',
     version: 'net_version',
   },
 }
