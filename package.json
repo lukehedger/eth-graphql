@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/lukehedger/eth-graphql#readme",
   "dependencies": {
+    "ethjs-unit": "^0.1.6",
     "graphql-yoga": "^0.9.0",
     "node-fetch": "^1.7.3"
   },
