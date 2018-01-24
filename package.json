@@ -44,6 +44,7 @@
     "node-fetch": "^1.7.3"
   },
   "devDependencies": {
+    "dotenv": "^4.0.0",
     "eslint": "^4.16.0",
     "ganache-cli": "^6.0.3",
     "jest": "^22.1.4",
