@@ -1,7 +1,6 @@
 const unit = require('ethjs-unit')
 
-const { METHODS, RPC_ENDPOINT } = require('../constants')
-const { makeRPCRequest } = require('../util')
+const { METHODS } = require('../constants')
 
 /**
  * Returns a list of addresses owned by client with their balance.
@@ -11,19 +10,18 @@ const { makeRPCRequest } = require('../util')
  * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_accounts
  * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getbalance
  *
+ * @param  {Object} _                      Parent resolver context
+ * @param  {Object} args                   Query arguments
+ * @param  {Object} context                GraphQL request context
+ * @param  {Object} context.makeRPCRequest RPC request factory
  * @return {Array}
  */
-const accountsWithBalances = async () => {
+const accountsWithBalances = async (_, args, { makeRPCRequest }) => {
   try {
-    const { result: accounts } = await makeRPCRequest(
-      RPC_ENDPOINT,
-      METHODS.eth.accounts
-    )
+    const { result: accounts } = await makeRPCRequest(METHODS.eth.accounts)
 
     const balances = await Promise.all(
-      accounts.map(account =>
-        makeRPCRequest(RPC_ENDPOINT, METHODS.eth.getBalance, [account])
-      )
+      accounts.map(account => makeRPCRequest(METHODS.eth.getBalance, [account]))
     )
 
     const result = balances.map(({ result: balance }, index) => {

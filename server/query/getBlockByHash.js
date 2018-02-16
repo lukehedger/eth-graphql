@@ -1,5 +1,4 @@
-const { METHODS, RPC_ENDPOINT } = require('../constants')
-const { makeRPCRequest } = require('../util')
+const { METHODS } = require('../constants')
 
 /**
  * Returns information about a block by block hash.
@@ -8,14 +7,16 @@ const { makeRPCRequest } = require('../util')
  *
  * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getblockbyhash
  *
- * @param  {Object} _           Parent resolver context
- * @param  {Object} args        Query arguments
- * @param  {Array}  args.params RPC request parameters
+ * @param  {Object} _                      Parent resolver context
+ * @param  {Object} args                   Query arguments
+ * @param  {Array}  args.params            RPC request parameters
+ * @param  {Object} context                GraphQL request context
+ * @param  {Object} context.makeRPCRequest RPC request factory
  * @return {Object}
  */
-const getBlockByHash = async (_, { params }) => {
+const getBlockByHash = async (_, { params }, { makeRPCRequest }) => {
   try {
-    const rpc = await makeRPCRequest(RPC_ENDPOINT, METHODS.eth.getBlockByHash, [
+    const rpc = await makeRPCRequest(METHODS.eth.getBlockByHash, [
       ...params,
       true,
     ])

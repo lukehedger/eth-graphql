@@ -1,5 +1,4 @@
-const { METHODS, RPC_ENDPOINT } = require('../constants')
-const { makeRPCRequest } = require('../util')
+const { METHODS } = require('../constants')
 
 /**
  * Returns the client coinbase address.
@@ -8,11 +7,15 @@ const { makeRPCRequest } = require('../util')
  *
  * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_coinbase
  *
+ * @param  {Object} _                      Parent resolver context
+ * @param  {Object} args                   Query arguments
+ * @param  {Object} context                GraphQL request context
+ * @param  {Object} context.makeRPCRequest RPC request factory
  * @return {String}
  */
-const coinbase = async () => {
+const coinbase = async (_, args, { makeRPCRequest }) => {
   try {
-    const rpc = await makeRPCRequest(RPC_ENDPOINT, METHODS.eth.coinbase)
+    const rpc = await makeRPCRequest(METHODS.eth.coinbase)
 
     if (rpc.error) {
       throw new Error(rpc.error.message)

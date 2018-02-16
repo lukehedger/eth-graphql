@@ -1,5 +1,4 @@
-const { METHODS, RPC_ENDPOINT } = require('../constants')
-const { makeRPCRequest } = require('../util')
+const { METHODS } = require('../constants')
 
 /**
  * Returns the number of transactions in a block matching the given block number.
@@ -8,15 +7,20 @@ const { makeRPCRequest } = require('../util')
  *
  * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getblocktransactioncountbynumber
  *
- * @param  {Object} _           Parent resolver context
- * @param  {Object} args        Query arguments
- * @param  {Array}  args.params RPC request parameters
+ * @param  {Object} _                      Parent resolver context
+ * @param  {Object} args                   Query arguments
+ * @param  {Array}  args.params            RPC request parameters
+ * @param  {Object} context                GraphQL request context
+ * @param  {Object} context.makeRPCRequest RPC request factory
  * @return {String}
  */
-const getBlockTransactionCountByNumber = async (_, { params }) => {
+const getBlockTransactionCountByNumber = async (
+  _,
+  { params },
+  { makeRPCRequest }
+) => {
   try {
     const rpc = await makeRPCRequest(
-      RPC_ENDPOINT,
       METHODS.eth.getBlockTransactionCountByNumber,
       params
     )

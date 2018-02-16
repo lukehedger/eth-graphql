@@ -1,5 +1,4 @@
-const { METHODS, RPC_ENDPOINT } = require('../constants')
-const { makeRPCRequest } = require('../util')
+const { METHODS } = require('../constants')
 
 /**
  * Returns if client is actively listening for network connections.
@@ -8,11 +7,15 @@ const { makeRPCRequest } = require('../util')
  *
  * @see https://github.com/ethereum/wiki/wiki/JSON-RPC#net_listening
  *
+ * @param  {Object} _                      Parent resolver context
+ * @param  {Object} args                   Query arguments
+ * @param  {Object} context                GraphQL request context
+ * @param  {Object} context.makeRPCRequest RPC request factory
  * @return {Boolean}
  */
-const listening = async () => {
+const listening = async (_, args, { makeRPCRequest }) => {
   try {
-    const rpc = await makeRPCRequest(RPC_ENDPOINT, METHODS.net.listening)
+    const rpc = await makeRPCRequest(METHODS.net.listening)
 
     if (rpc.error) {
       throw new Error(rpc.error.message)
