@@ -20,7 +20,7 @@
   "scripts": {
     "blockchain": "ganache-cli",
     "lint:staged": "lint-staged",
-    "start": "npm run blockchain & nodemon --watch server server",
+    "start": "nodemon --watch server server",
     "start:prod": "node server",
     "test": "jest"
   },
@@ -43,12 +43,13 @@
     "chalk": "^2.3.0",
     "ethjs-unit": "^0.1.6",
     "graphql-yoga": "^0.9.0",
-    "node-fetch": "^1.7.3"
+    "node-fetch": "^1.7.3",
+    "ws": "^4.0.0"
   },
   "devDependencies": {
     "dotenv": "^4.0.0",
     "eslint": "^4.16.0",
-    "ganache-cli": "^6.0.3",
+    "ganache-cli": "^6.1.0-beta.2",
     "jest": "^22.1.4",
     "lint-staged": "^6.0.1",
     "nodemon": "^1.14.11",
