@@ -16,10 +16,7 @@ const { METHODS } = require('../constants')
  */
 const getTransactionByHash = async (_, { params }, { makeRPCRequest }) => {
   try {
-    const rpc = await makeRPCRequest(METHODS.eth.getTransactionByHash, [
-      ...params,
-      true,
-    ])
+    const rpc = await makeRPCRequest(METHODS.eth.getTransactionByHash, params)
 
     if (rpc.error) {
       throw new Error(rpc.error.message)
